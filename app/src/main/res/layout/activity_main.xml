@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,72 @@
     tools:context="com.example.student.rejestracjawizyt.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/txtumow"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Umów wizytę"
+        android:textSize="17sp"
+        android:textColor="@android:color/white" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtdlugitekst"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/txtumow"
+        android:text="Wpisz pesel pacjenta dla którego chcesz umówić wizytę"
+        android:textSize="13sp"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/txt_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/txtumow"
+        android:hint="Podaj numer pesel"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/obraz"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_healing_black_24dp"
+        android:layout_below="@+id/txt_edittext"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btn_wybierzLekarza"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Wybierz Lekarza"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+
+
+
+
+        />
+
+
+</RelativeLayout>
