@@ -13,6 +13,10 @@ import butterknife.ButterKnife;
 
 public class Main2Activity extends AppCompatActivity {
 
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +31,13 @@ public class Main2Activity extends AppCompatActivity {
         lekarz.add(new Lekarz("Agnieszka Domańska","chirurg plastyczny"));
         lekarz.add(new Lekarz("Klaudia Nowak","kardiolog"));
         lekarz.add(new Lekarz("Alicja Mazur","neurolog"));
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+
+        //Tworzenie Adaptera
+        LekarzAdapter lekarzAdapter = new LekarzAdapter(lekarz);
+        recyclerView.setAdapter(lekarzAdapter);
 
 
     }
