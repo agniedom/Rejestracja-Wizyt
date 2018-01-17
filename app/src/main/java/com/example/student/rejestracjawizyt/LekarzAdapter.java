@@ -55,11 +55,24 @@ public class LekarzAdapter extends RecyclerView.Adapter<LekarzAdapter.ViewHolder
         @BindView(R.id.txtzawod)
         TextView zawod;
 
+        @OnClick(R.id.btn_wybierz)
+        void OnNameClick(){
+            if(Wybrane.getText()=="Wybrano")
+            {
+                Wybrane.setText("Wybierz");
+            }
+            else
+            {
+                Wybrane.setText("Wybrano");
+            }
+
+        }
+
+
         public ViewHolder(View itemView)
         {
             super(itemView);
             ButterKnife.bind(this,itemView);
-            Wybrane.setVisibility(View.INVISIBLE);
         }
 
         private void setName(String Name) {
